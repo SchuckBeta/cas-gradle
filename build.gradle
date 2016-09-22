@@ -12,6 +12,11 @@ buildscript {
     }
 }
 
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+
 task wrapper(type: Wrapper) {
     gradleVersion = project."gradle.version"
 }
@@ -23,3 +28,5 @@ task generateKey << {
     def params = octetKey.toParams(JsonWebKey.OutputControlLevel.INCLUDE_SYMMETRIC)
     println "key: ${params.get('k')}"
 }
+
+

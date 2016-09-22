@@ -29,7 +29,11 @@
     <bean id="attributeRepository" class="org.jasig.services.persondir.support.NamedStubPersonAttributeDao"
           p:backingMap-ref="attrRepoBackingMap" />
 
-    <alias name="acceptUsersAuthenticationHandler" alias="primaryAuthenticationHandler" />
+    <alias name="queryDatabaseAuthenticationHandler" alias="primaryAuthenticationHandler" />
+    <alias name="dataSource" alias="queryDatabaseDataSource" />
+  <alias name="defaultPasswordEncoder" alias="passwordEncoder" />
+    
+    <!-- <alias name="acceptUsersAuthenticationHandler" alias="primaryAuthenticationHandler" /> -->    
     <alias name="personDirectoryPrincipalResolver" alias="primaryPrincipalResolver" />
 
     <util:map id="attrRepoBackingMap">

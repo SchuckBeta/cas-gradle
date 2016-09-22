@@ -19,6 +19,9 @@ dependencies {
     runtime("org.jasig.cas:cas-server-webapp:${project.'cas.version'}@war") {
         transitive = true
     }
+    compile("org.jasig.cas:cas-server-support-jdbc:4.2.5")
+    compile("c3p0:c3p0:0.9.1.2")
+    compile("mysql:mysql-connector-java:5.1.39")
 }
 
 war {

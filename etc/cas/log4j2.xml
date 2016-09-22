@@ -34,14 +34,14 @@
         </RollingFile>
     </Appenders>
     <Loggers>
-        <AsyncLogger  name="org.jasig" level="info" additivity="false" includeLocation="true">
+        <AsyncLogger  name="org.jasig" level="all" additivity="false" includeLocation="true">
             <AppenderRef ref="console"/>
             <AppenderRef ref="file"/>
         </AsyncLogger>
-        <AsyncLogger  name="org.springframework" level="warn" />
-        <AsyncLogger name="org.springframework.webflow" level="warn" />
-        <AsyncLogger name="org.springframework.web" level="warn" />
-        <AsyncLogger name="org.pac4j" level="warn" />
+        <AsyncLogger  name="org.springframework" level="all" />
+        <AsyncLogger name="org.springframework.webflow" level="all" />
+        <AsyncLogger name="org.springframework.web" level="all" />
+        <AsyncLogger name="org.pac4j" level="all" />
         <AsyncLogger name="org.apache" level="off" />
         <!--
         <AsyncLogger name="org.opensaml" level="debug" additivity="false">
@@ -58,18 +58,18 @@
         </AsyncLogger>
         -->
 
-        <AsyncLogger name="perfStatsLogger" level="info" additivity="false" includeLocation="true">
+        <AsyncLogger name="perfStatsLogger" level="all" additivity="false" includeLocation="true">
             <AppenderRef ref="perfFileAppender"/>
         </AsyncLogger>
 
-        <AsyncLogger name="org.jasig.cas.web.flow" level="info" additivity="true" includeLocation="true">
+        <AsyncLogger name="org.jasig.cas.web.flow" level="all" additivity="true" includeLocation="true">
             <AppenderRef ref="file"/>
         </AsyncLogger>
-        <AsyncLogger name="org.jasig.inspektr.audit.support" level="info" includeLocation="true">
+        <AsyncLogger name="org.jasig.inspektr.audit.support" level="all" includeLocation="true">
             <AppenderRef ref="auditlogfile"/>
             <AppenderRef ref="file"/>
         </AsyncLogger>
-        <AsyncRoot level="info">
+        <AsyncRoot level="all">
             <AppenderRef ref="console"/>
         </AsyncRoot>
     </Loggers>
